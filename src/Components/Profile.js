@@ -12,7 +12,7 @@ const Profile=()=>{
        setDetails({});
     }
     useEffect(()=>{
-     if(details.id===""){
+     if(Object.keys(details).length===0){
         alert("pls do login first")
         navigate("/");
         return
@@ -21,7 +21,7 @@ const Profile=()=>{
       .then((res)=>{
         setData(res.data)
         console.log(res.data);
-    }) 
+    })
     },[])
     return(
         <div style={{backgroundColor:"black"}}>

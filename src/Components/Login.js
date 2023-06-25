@@ -29,7 +29,8 @@ const Login=()=>{
             setDetails({...details,id:res.data.id,token:res.data.token})
             console.log(details)
         })
-        .catch(err=>console.log(err))
+        .catch((err)=>{console.log(err.message)
+        setError(err.message)})
         
         
     }
