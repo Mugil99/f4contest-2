@@ -22,7 +22,7 @@ const Profile=()=>{
         setData(res.data)
         console.log(res.data);
     }) 
-    })
+    },[])
     return(
         <div style={{backgroundColor:"black"}}>
             {
@@ -42,7 +42,7 @@ const Profile=()=>{
             <h2>Weight : {data.weight}</h2><br/>
             <button onClick={handleLogout}>Logout</button>
             </div>
-                    </div>
+            </div>
                 )
             }            
         </div>
